@@ -134,4 +134,4 @@ django_heroku.settings(locals())
 
 import os
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = 'static'
