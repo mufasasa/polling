@@ -1,3 +1,6 @@
+import django_heroku
+
+
 """
 Django settings for project project.
 
@@ -126,7 +129,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configure Django App for Heroku.
-import django_heroku
+
 django_heroku.settings(locals())
 
-STATIC_ROOT = BASE_DIR / 'static'
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
