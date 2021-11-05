@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<htm>
+
+    <head>
+        <title>LGA Results</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    
+    <body>
+        <h1>
+            election results 
+        </h1>
+        <ul>
+            {% for party in results_per_party %}
+            <li>
+                {{party.party_name}} - {{party.party_score}}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</htm>l

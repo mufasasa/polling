@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Select LGA</title>
+    </head>
+
+    <body>
+        <h1>Select LGA</h1>
+        <form action="{% url 'select_lga' %}" method="post">
+            {% csrf_token %}
+            <select name="lga">
+                {% for lga in lgas %}
+                    <option value="{{ lga.uniqueid }}">{{ lga.lga_name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit">
+        </form>
+</html>

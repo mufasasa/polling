@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Polling Units</title>
+</head>
+
+<body>
+    <h1>Polling Units</h1>
+
+    <h3> Here are all the pollinng units </h3>
+    <h3> click on a polling unit to go to its page and view results </h3>
+    
+    <ul>
+        {% for unit in polling_units  %}
+
+        <li>
+            <a href="{% url 'polling_unit' unit.uniqueid %}"> {{unit.uniqueid}} {{unit.polling_unit_name}} </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>

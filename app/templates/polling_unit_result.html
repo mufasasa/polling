@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Polling Unit Result</title>
+    </head>
+
+    <body>
+        <h2>
+            polling unit number {{polling_unit.uniqueid}} 
+        </h2>
+        <h2>
+            Name: {{polling_unit.polling_unit_name}}
+        </h2>
+
+        <h3>Results</h3>
+        <!--- if no results, display message -->
+        {% if not results %}
+            <p>No results for this polling unit</p>
+        {% endif %}
+        <ul>
+            {% for result in polling_unit_results %}
+                <li>
+                    {{result.party_abbreviation}}: {{result.party_score}}
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>
